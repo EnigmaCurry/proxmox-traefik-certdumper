@@ -16,8 +16,8 @@ function dump() {
 }
 
 function copy_to_proxmox() {
-    cp /output/ssl/pem/*-public.pem /output/nodes/$PVE_HOST/pveproxy-ssl.pem
-    cp /output/ssl/pem/*-private.pem /output/nodes/$PVE_HOST/pveproxy-ssl.key
+    cp "/output/ssl/pem/$CERTIFICATE-public.pem" /output/nodes/$PVE_HOST/pveproxy-ssl.pem
+    cp "/output/ssl/pem/$CERTIFICATE-private.pem" /output/nodes/$PVE_HOST/pveproxy-ssl.key
 }
 
 mkdir -p /output/ssl/pem

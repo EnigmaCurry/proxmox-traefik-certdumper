@@ -12,8 +12,11 @@ services:
     restart: always
     privileged: true			      
     environment:
+      CERTIFICATE: *.gtown.lan.rymcg.tech
       PVE_HOST: stardust
 ```
+
+Change CERTIFICATE to the name of the certificate (which is the domain name by default)
 
 Change PVE_HOST to the hostname of your proxmox server.
 
