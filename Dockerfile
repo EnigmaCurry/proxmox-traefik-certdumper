@@ -1,7 +1,5 @@
 FROM ciscocloud/consul-cli:0.3.1 AS consul-cli
 
-
-
 FROM alpine
 
 RUN apk --no-cache add inotify-tools jq openssl util-linux bash
