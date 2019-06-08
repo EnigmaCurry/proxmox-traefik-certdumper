@@ -11,4 +11,10 @@ services:
       - /etc/pve/ssl:/output
     restart: always
     privileged: true			      
+    environment:
+      PVE_HOST: stardust
 ```
+
+Change PVE_HOST to the hostname of your proxmox server.
+
+Writes traefik public ssl cert to `/etc/pve/nodes/$PVE_HOST/pveproxy-ssl.pem` and the key to `/etc/pve/nodes/$PVE_HOST/pveproxy-ssl.key`
