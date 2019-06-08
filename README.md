@@ -12,7 +12,7 @@ services:
     restart: always
     privileged: true			      
     environment:
-      CERTIFICATE: *.gtown.lan.rymcg.tech
+      CERTIFICATE: "*.gtown.lan.rymcg.tech"
       PVE_HOST: stardust
 ```
 
