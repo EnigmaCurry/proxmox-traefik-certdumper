@@ -23,8 +23,10 @@ function copy_to_proxmox() {
 mkdir -p /output/ssl/pem
 # run once on start to make sure we have any old certs
 dump
+copy_to_proxmox
 
 while true; do
     inotifywait -e modify /traefik/acme.json
     dump
+    copy_to_proxmox
 done
